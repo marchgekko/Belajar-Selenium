@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-08T08:16:38.520Z",
+    "end": "2025-08-08T08:16:44.072Z",
+    "duration": 5552,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "382b151c-0bbf-404e-9d49-bb31f12d16b8",
+      "title": "",
+      "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\1.Test_SauceDemo\\tests\\test_sauce.js",
+      "file": "\\tests\\test_sauce.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e16d10a-47d6-4547-b34a-9a2c83f84195",
+          "title": "SauceDemo Automation Test - Tanpa before/after (GUI Mode)",
+          "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\1.Test_SauceDemo\\tests\\test_sauce.js",
+          "file": "\\tests\\test_sauce.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login ke SauceDemo",
+              "fullTitle": "SauceDemo Automation Test - Tanpa before/after (GUI Mode) Login ke SauceDemo",
+              "timedOut": false,
+              "duration": 2762,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await createDriver();\ntry {\n  await login(driver);\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "1ff7c234-07b8-40f6-b852-a619c1062c94",
+              "parentUUID": "8e16d10a-47d6-4547-b34a-9a2c83f84195",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mengurutkan produk dari Z ke A",
+              "fullTitle": "SauceDemo Automation Test - Tanpa before/after (GUI Mode) Mengurutkan produk dari Z ke A",
+              "timedOut": false,
+              "duration": 2781,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await createDriver();\ntry {\n  await login(driver);\n  // Tunggu dropdown sortir\n  let dropdownSort = await driver.wait(\n    until.elementLocated(By.css('[data-test=\"product-sort-container\"]')),\n    10000\n  );\n  await driver.wait(until.elementIsVisible(dropdownSort), 5000);\n  // Pilih \"Name (Z to A)\"\n  await dropdownSort.sendKeys('Name (Z to A)');\n  // Tunggu produk pertama sesuai\n  const firstProduct = await driver.wait(\n    until.elementLocated(By.className('inventory_item_name')),\n    10000\n  );\n  const productName = await firstProduct.getText();\n  assert.strictEqual(\n    productName,\n    'Test.allTheThings() T-Shirt (Red)',\n    'Produk pertama tidak sesuai Z-A'\n  );\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "13f70851-8741-4e80-ba34-3e0c0883dd15",
+              "parentUUID": "8e16d10a-47d6-4547-b34a-9a2c83f84195",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1ff7c234-07b8-40f6-b852-a619c1062c94",
+            "13f70851-8741-4e80-ba34-3e0c0883dd15"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5543,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
