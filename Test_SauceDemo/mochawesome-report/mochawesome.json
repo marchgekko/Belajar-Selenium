@@ -1,0 +1,251 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-08T09:15:19.623Z",
+    "end": "2025-08-08T09:15:29.575Z",
+    "duration": 9952,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "349d8e02-b407-4c0d-8def-23ee38a2ca65",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "141449c2-3792-4030-aa72-ae0ba073594a",
+          "title": "SauceDemo Automation Test - Cross Browser & Headless/Headed",
+          "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Test_SauceDemo\\tests\\sesi10-test_sauce.js",
+          "file": "\\tests\\sesi10-test_sauce.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed \"before all\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "timedOut": false,
+              "duration": 677,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('before() → Membuat driver (Chrome Headed)');\ndriver = await createDriver('chrome', 'headed');",
+              "err": {},
+              "uuid": "a319821c-be60-49ef-9d81-1fd5ed04aee1",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed \"before each\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "timedOut": false,
+              "duration": 296,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('beforeEach() → Login sebelum test');\nawait login(driver);",
+              "err": {},
+              "uuid": "d5c6d6a4-0868-408c-85ad-ab2bf40be3cc",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed \"after all\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "timedOut": false,
+              "duration": 47,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('after() → Menutup driver');\nawait driver.quit();",
+              "err": {},
+              "uuid": "5bddda2e-5e34-4b27-98e9-8e8e75e46985",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed \"after each\" hook in \"SauceDemo Automation Test - Cross Browser & Headless/Headed\"",
+              "timedOut": false,
+              "duration": 888,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('afterEach() → Logout setelah test');\nawait logout(driver);",
+              "err": {},
+              "uuid": "df984e40-8e0e-4e2c-ba7d-7adc709cb217",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login ke SauceDemo",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed Login ke SauceDemo",
+              "timedOut": false,
+              "duration": 15,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const logo = await driver.findElement(By.className('app_logo'));\nconst logoText = await logo.getText();\nassert.strictEqual(logoText, 'Swag Labs');",
+              "err": {},
+              "uuid": "e7f78185-1d6e-4e69-afa6-b16c3be757dc",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mengurutkan produk dari Z ke A",
+              "fullTitle": "SauceDemo Automation Test - Cross Browser & Headless/Headed Mengurutkan produk dari Z ke A",
+              "timedOut": false,
+              "duration": 75,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let dropdownSort = await driver.wait(\n  until.elementLocated(By.css('[data-test=\"product-sort-container\"]')),\n  10000\n);\nawait driver.wait(until.elementIsVisible(dropdownSort), 5000);\nawait dropdownSort.sendKeys('Name (Z to A)');\nconst firstProduct = await driver.wait(\n  until.elementLocated(By.className('inventory_item_name')),\n  10000\n);\nconst productName = await firstProduct.getText();\nassert.strictEqual(\n  productName,\n  'Test.allTheThings() T-Shirt (Red)',\n  'Produk pertama tidak sesuai Z-A'\n);",
+              "err": {},
+              "uuid": "2fd236e9-bdbb-46ef-a47a-43b6c68eb27f",
+              "parentUUID": "141449c2-3792-4030-aa72-ae0ba073594a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e7f78185-1d6e-4e69-afa6-b16c3be757dc",
+            "2fd236e9-bdbb-46ef-a47a-43b6c68eb27f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 90,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "9a3a124f-cd95-4e84-a56f-13a1e6e12945",
+          "title": "SauceDemo Automation Test - Tanpa before/after (GUI Mode)",
+          "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Test_SauceDemo\\tests\\sesi9-test_sauce.js",
+          "file": "\\tests\\sesi9-test_sauce.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login ke SauceDemo",
+              "fullTitle": "SauceDemo Automation Test - Tanpa before/after (GUI Mode) Login ke SauceDemo",
+              "timedOut": false,
+              "duration": 2575,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await createDriver();\ntry {\n  await login(driver);\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "1a0e5189-5e8f-4842-be41-190f62787b04",
+              "parentUUID": "9a3a124f-cd95-4e84-a56f-13a1e6e12945",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mengurutkan produk dari Z ke A",
+              "fullTitle": "SauceDemo Automation Test - Tanpa before/after (GUI Mode) Mengurutkan produk dari Z ke A",
+              "timedOut": false,
+              "duration": 2643,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await createDriver();\ntry {\n  await login(driver);\n  // Tunggu dropdown sortir\n  let dropdownSort = await driver.wait(\n    until.elementLocated(By.css('[data-test=\"product-sort-container\"]')),\n    10000\n  );\n  await driver.wait(until.elementIsVisible(dropdownSort), 5000);\n  // Pilih \"Name (Z to A)\"\n  await dropdownSort.sendKeys('Name (Z to A)');\n  // Tunggu produk pertama sesuai\n  const firstProduct = await driver.wait(\n    until.elementLocated(By.className('inventory_item_name')),\n    10000\n  );\n  const productName = await firstProduct.getText();\n  assert.strictEqual(\n    productName,\n    'Test.allTheThings() T-Shirt (Red)',\n    'Produk pertama tidak sesuai Z-A'\n  );\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "5b8a35b0-57a0-4c8d-9b8e-e6705f55a92c",
+              "parentUUID": "9a3a124f-cd95-4e84-a56f-13a1e6e12945",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a0e5189-5e8f-4842-be41-190f62787b04",
+            "5b8a35b0-57a0-4c8d-9b8e-e6705f55a92c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5218,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

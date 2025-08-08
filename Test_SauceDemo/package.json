@@ -1,0 +1,22 @@
+{
+  "name": "belajar_selenium",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver tests using Mocha with Mochawesome report",
+  "main": "index.js",
+  "scripts": {
+  "test:sesi9": "mocha tests/sesi9-test_sauce.js --timeout 60000 --reporter mochawesome",
+  "test:sesi10": "BROWSER=chrome MODE=headed mocha tests/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
+  "test:sesi10:firefox": "BROWSER=firefox MODE=headless mocha tests/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
+  "test:sesi10:chrome-headless": "BROWSER=chrome MODE=headless mocha tests/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
+  "test:all": "mocha tests/*.js --timeout 60000 --reporter mochawesome"
+},
+  "author": "GekkoMarta",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.34.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3"
+  }
+}
