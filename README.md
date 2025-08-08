@@ -34,9 +34,10 @@ npm run test:all
 ## 📄 Laporan Hasil Test
 Setelah test selesai, laporan akan tersimpan di:
 ```
-`mochawesome-report/`
-Buka file mochawesome.html di browser untuk melihat laporan visual.
+mochawesome-report/
 ```
+Buka file mochawesome.html di browser untuk melihat laporan visual.
+
 
 ---
 ## 🛠 Teknologi yang Digunakan
