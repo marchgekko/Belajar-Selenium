@@ -4,18 +4,18 @@
   "description": "Selenium WebDriver tests using Mocha with Mochawesome report",
   "main": "index.js",
   "scripts": {
-  "test:sesi9": "mocha tests/Sesi_9/sesi9-test_sauce.js --timeout 60000 --reporter mochawesome",
-  "test:sesi10": "BROWSER=chrome MODE=headed mocha tests/Sesi_10/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
-  "test:sesi10:firefox": "BROWSER=firefox MODE=headless mocha tests/Sesi_10/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
-  "test:sesi10:chrome-headless": "BROWSER=chrome MODE=headless mocha tests/Sesi_10/sesi10-test_sauce.js --timeout 60000 --reporter mochawesome",
-  "test:all": "mocha \"tests/**/*.js\" --timeout 60000 --reporter mochawesome"
-},
+    "test:sesi9": "cross-env BROWSER=chrome MODE=headed mocha \"tests/Sesi_9/sesi9-test_sauce.js\" --timeout 60000 --reporter mochawesome",
+    "test:sesi10": "cross-env BROWSER=chrome MODE=headed mocha \"tests/Sesi_10/sesi10-test_sauce.js\" --timeout 60000 --reporter mochawesome",
+    "test:all": "cross-env BROWSER=chrome MODE=headed mocha \"tests/**/*.js\" --timeout 60000 --reporter mochawesome",
+    "test:login": "cross-env BROWSER=chrome MODE=headed mocha \"tests/**/*.js\" --grep 'Login'"
+  },
   "author": "GekkoMarta",
   "license": "ISC",
   "dependencies": {
     "selenium-webdriver": "^4.34.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "mocha": "^11.7.1",
     "mochawesome": "^7.1.3"
   }
