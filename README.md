@@ -1,5 +1,5 @@
 # Belajar-Selenium
-by **Andrean Martsyah**
+by **Andrean Martasyah**
 
 Sebuah repositori berisi contoh-contoh otomatisasi pengujian web menggunakan Selenium WebDriver, 
 dikombinasikan dengan framework Mocha untuk pengujian, serta Mochawesome untuk laporan hasil pengujian visual.
