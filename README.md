@@ -43,7 +43,7 @@ Silakan untuk fork dan ajukan pull request!
 
 ## Author
 - [Andrean Martsyah](https://github.com/marchgekko)
-- (https://www.instagram.com/andreanmarta00/)
+- https://www.instagram.com/andreanmarta00/
 - [![GitHub followers](https://img.shields.io/github/followers/marchgekko?style=social)](https://github.com/marchgekko)
 
 ## Struktur Direktori
@@ -76,7 +76,3 @@ Silakan untuk fork dan ajukan pull request!
 │ └── package.json
 │
 └── README.md 
-
-
-
-
