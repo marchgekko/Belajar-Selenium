@@ -25,7 +25,7 @@ npm instal`
   - `npm run test:sesi10:chrome-headless → Chrome (headless)`
   
 - Semua pengujian (Sesi 9 & Sesi 10)
-  `npm run test:all`
+  - `npm run test:all`
   
 - Sesi 11 - Page Object Model (POM) 
   Fitur tambahan:
@@ -33,13 +33,13 @@ npm instal`
     - Struktur kode modular untuk kemudahan maintenance
       
   Menjalankan Sesi 11:
-  `npm run test`
+  - `npm run test`
   
 ## Laporan Hasil Pengujian
 Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawesome-report/. Bukalah file mochawesome.html di browser untuk melihat hasil pengujian secara visual.
 
 ## Struktur Direktori
-`Belajar-Selenium/
+Belajar-Selenium/
 ├── Sesi9-10_Test_SauceDemo/
 │ ├── mochawesome-report/   # Laporan hasil pengujian Sesi 9 & 10
 │ ├── node_modules/         # Dependensi Node.js
@@ -67,7 +67,7 @@ Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawe
 │ ├── package-lock.json
 │ └── package.json
 │
-└── README.md `
+└── README.md 
 
 
 ## Kontribusi
