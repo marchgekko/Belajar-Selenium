@@ -20,9 +20,10 @@ npm instal`
 - Sesi 9 – Contoh pengujian menggunakan Chrome headed:
   `npm run test:sesi9`
 - Sesi 10 – Pengujian dengan kombinasi browser dan mode:
-  `-npm run test:sesi10 → Chrome (headed)
-  -npm run test:sesi10:firefox → Firefox (headless)
-  -npm run test:sesi10:chrome-headless → Chrome (headless)`
+  `- npm run test:sesi10 → Chrome (headed)`
+  `- npm run test:sesi10:firefox → Firefox (headless)`
+  `- npm run test:sesi10:chrome-headless → Chrome (headless)`
+  
 - Semua pengujian (Sesi 9 & Sesi 10)
   `npm run test:all`
   
