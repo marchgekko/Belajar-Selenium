@@ -1,0 +1,22 @@
+{
+  "name": "sesi11_testsaucedemo",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"tests/sesi11-test_sauce.js\" --timeout 60000 --reporter mochawesome"
+  },
+  "author": "GekkoMarta",
+  "license": "ISC",
+  "dependencies": {
+    "jimp": "^1.6.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "selenium-webdriver": "^4.34.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3"
+  }
+}
