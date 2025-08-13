@@ -1,14 +1,17 @@
 # Belajar-Selenium
 by **Andrean Martasyah**
 
-Sebuah repositori berisi contoh-contoh otomatisasi pengujian web menggunakan Selenium WebDriver, 
-dikombinasikan dengan framework Mocha untuk pengujian, serta Mochawesome untuk laporan hasil pengujian visual.
+Sebuah repositori berisi contoh-contoh otomatisasi pengujian web pada [saucedemo.com](https://www.saucedemo.com/) menggunakan Selenium WebDriver, 
+dikombinasikan dengan framework Mocha untuk pengujian, serta Mochawesome untuk laporan hasil pengujian visual.  
+Proyek ini juga memanfaatkan **jimp**, **pixelmatch**, dan **pngjs** untuk melakukan pengolahan gambar & perbandingan visual, 
+serta pengunaan cross-platform environmen untuk mempermudah pengaturan variabel environment lintas platform.
 
 ## Teknologi yang Digunakan
 - Node.js (pastikan versi kompatibel—misalnya v14+)
 - Selenium WebDriver
 - Mocha sebagai framework pengujian
 - Mochawesome untuk laporan hasil pengujian
+- jimp, pixelmatch, dan pngjs untuk melakukan pengolahan gambar & perbandingan visual
 - Browser Chrome dan/atau Firefox (dengan dukungan mode headed dan headless)
 
 ## Persiapan & Instalasi
