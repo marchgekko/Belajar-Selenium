@@ -38,8 +38,16 @@ npm instal`
 ## Laporan Hasil Pengujian
 Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawesome-report/. Bukalah file mochawesome.html di browser untuk melihat hasil pengujian secara visual.
 
+## Kontribusi
+Silakan untuk fork dan ajukan pull request!
+
+## Author
+- [Andrean Martsyah](https://github.com/marchgekko)
+- (https://www.instagram.com/andreanmarta00/)
+- [![GitHub followers](https://img.shields.io/github/followers/marchgekko?style=social)](https://github.com/marchgekko)
+
 ## Struktur Direktori
-Belajar-Selenium/
+```Belajar-Selenium/
 ├── Sesi9-10_Test_SauceDemo/
 │ ├── mochawesome-report/   # Laporan hasil pengujian Sesi 9 & 10
 │ ├── node_modules/         # Dependensi Node.js
@@ -70,10 +78,5 @@ Belajar-Selenium/
 └── README.md 
 
 
-## Kontribusi
-Silakan untuk fork dan ajukan pull request!
 
-## Author
-[Andrean Martsyah](https://github.com/marchgekko)(https://www.instagram.com/andreanmarta00/)
-[![GitHub followers](https://img.shields.io/github/followers/marchgekko?style=social)](https://github.com/marchgekko)
 
