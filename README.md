@@ -12,9 +12,9 @@ dikombinasikan dengan framework Mocha untuk pengujian, serta Mochawesome untuk l
 - Browser Chrome dan/atau Firefox (dengan dukungan mode headed dan headless)
 
 ## Persiapan & Instalasi
-`git clone https://github.com/marchgekko/Belajar-Selenium.git
-cd Belajar-Selenium
-npm instal`
+- `git clone https://github.com/marchgekko/Belajar-Selenium.git`
+- `cd Belajar-Selenium`
+- `npm instal`
 
 ## Menjalankan Pengujian
 - Sesi 9 – Contoh pengujian menggunakan Chrome headed:
@@ -31,9 +31,8 @@ npm instal`
   Fitur tambahan:
     - Screenshot otomatis pada akhir setiap test
     - Struktur kode modular untuk kemudahan maintenance
-      
-  Menjalankan Sesi 11:
-  - `npm run test`
+  
+  - `Menjalankan Sesi 11 : npm run test`
   
 ## Laporan Hasil Pengujian
 Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawesome-report/. Bukalah file mochawesome.html di browser untuk melihat hasil pengujian secara visual.
