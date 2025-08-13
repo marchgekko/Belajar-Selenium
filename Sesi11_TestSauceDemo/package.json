@@ -1,6 +1,7 @@
 {
   "name": "sesi11_testsaucedemo",
   "version": "1.0.0",
+  "type": "module",
   "description": "Selenium WebDriver tests",
   "main": "index.js",
   "scripts": {

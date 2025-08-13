@@ -1,12 +1,15 @@
-const assert = require('assert');
-const { Builder } = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-const firefox = require('selenium-webdriver/firefox');
-const LoginPage = require('../pages/loginPage');
-const InventoryPage = require('../pages/inventoryPage');
+// tests/sesi11-test_sauce.js
+import assert from 'assert';
+import { Builder, By } from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome.js';
+import firefox from 'selenium-webdriver/firefox.js';
 
+import LoginPage from '../pages/loginPage.js';
+import InventoryPage from '../pages/inventoryPage.js';
+import { takeFullScreenshot, takePartialScreenshot } from '../helpers/screenshotHelper.js';
+import { compareScreenshot } from '../helpers/visualHelper.js';
 
-describe('Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)', function () {
+describe('Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)', function () {
   this.timeout(30000);
   let driver, loginPage, inventoryPage;
 
@@ -30,7 +33,6 @@ describe('Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)', funct
     }
 
     driver = await builder.build();
-
     loginPage = new LoginPage(driver);
     inventoryPage = new InventoryPage(driver);
   });
@@ -39,24 +41,40 @@ describe('Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)', funct
     await driver.quit();
   });
 
+  afterEach(async function () {
+    const testName = this.currentTest.title.replace(/\s+/g, '_');
+    try {
+      await takeFullScreenshot(driver, testName);
+      await takePartialScreenshot(driver, By.css('body'), testName);
+    } catch (err) {
+      console.warn(`⚠ Screenshot gagal di test "${testName}": ${err.message}`);
+    }
+  });
+
   it('Login ke SauceDemo', async () => {
     await loginPage.open();
-
     const title = await driver.getTitle();
     assert.strictEqual(title, 'Swag Labs');
-
     await loginPage.login('standard_user', 'secret_sauce');
     await loginPage.isLoginSuccessful();
   });
 
   it('Mengurutkan produk dari Z ke A', async () => {
     await inventoryPage.sortByZtoA();
-
     const productName = await inventoryPage.getFirstProductName();
     assert.strictEqual(
       productName,
       'Test.allTheThings() T-Shirt (Red)',
       'Produk pertama tidak sesuai Z-A'
     );
+  });
+
+  // ✅ Test Visual Compare
+  it('Visual Test - Halaman Login', async () => {
+    await loginPage.open();
+  const { isMatch, diffPixels, diffPath } = await compareScreenshot(driver, 'LoginPage');
+  
+    // Kalau mau otomatis fail kalau ada perbedaan:
+    assert.strictEqual(isMatch, true, `Visual mismatch ditemukan (${diffPixels} pixel berbeda)`);
   });
 });

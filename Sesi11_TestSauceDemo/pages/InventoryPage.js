@@ -1,6 +1,6 @@
-const { By, until } = require('selenium-webdriver');
+import { By, until } from 'selenium-webdriver';
 
-class InventoryPage {
+export default class InventoryPage {
   constructor(driver) {
     this.driver = driver;
     this.sortDropdown = By.css('[data-test="product-sort-container"]');
@@ -18,5 +18,3 @@ class InventoryPage {
     return firstProduct.getText();
   }
 }
-
-module.exports = InventoryPage;

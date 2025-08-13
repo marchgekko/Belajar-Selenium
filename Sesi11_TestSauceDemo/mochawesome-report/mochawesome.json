@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2025-08-13T06:02:32.242Z",
-    "end": "2025-08-13T06:02:34.495Z",
-    "duration": 2253,
-    "testsRegistered": 2,
+    "start": "2025-08-13T09:22:40.924Z",
+    "end": "2025-08-13T09:22:44.016Z",
+    "duration": 3092,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "78be27de-eef0-460d-8a4d-3f37218a1451",
+      "uuid": "c7573981-d311-475c-9f14-4f9ee46f816d",
       "title": "",
       "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Sesi11_TestSauceDemo\\tests\\sesi11-test_sauce.js",
       "file": "\\tests\\sesi11-test_sauce.js",
@@ -27,16 +27,16 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3b1b306c-6ec0-4f56-94fa-6f5ee982aa7f",
-          "title": "Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)",
+          "uuid": "b3659644-30de-4539-9408-70ad1848daa9",
+          "title": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)",
           "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Sesi11_TestSauceDemo\\tests\\sesi11-test_sauce.js",
           "file": "\\tests\\sesi11-test_sauce.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)\"",
-              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory) \"before all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)\"",
+              "title": "\"before all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) \"before all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
               "timedOut": false,
-              "duration": 705,
+              "duration": 847,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,18 +45,18 @@
               "context": null,
               "code": "const browser = process.env.BROWSER || 'chrome';\nconst mode = process.env.MODE || 'headed';\nlet builder = new Builder().forBrowser(browser);\nif (browser === 'chrome') {\n  let options = new chrome.Options().addArguments('--incognito');\n  if (mode === 'headless') {\n    options.addArguments('--headless', '--disable-gpu', '--window-size=1920,1080');\n  }\n  builder.setChromeOptions(options);\n} else if (browser === 'firefox') {\n  let options = new firefox.Options().addArguments('-private');\n  if (mode === 'headless') {\n    options.headless();\n  }\n  builder.setFirefoxOptions(options);\n}\ndriver = await builder.build();\nloginPage = new LoginPage(driver);\ninventoryPage = new InventoryPage(driver);",
               "err": {},
-              "uuid": "d036eea5-848e-4886-ba77-0bab4222ecaf",
-              "parentUUID": "3b1b306c-6ec0-4f56-94fa-6f5ee982aa7f",
+              "uuid": "e3bcb318-e749-4632-8758-454f629fe84b",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
               "isHook": true,
               "skipped": false
             }
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)\"",
-              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory) \"after all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)\"",
+              "title": "\"after all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) \"after all\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
               "timedOut": false,
-              "duration": 56,
+              "duration": 69,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,26 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "42271caa-cb74-49bf-9032-dc984924a3b6",
-              "parentUUID": "3b1b306c-6ec0-4f56-94fa-6f5ee982aa7f",
+              "uuid": "35e96ec2-fa1a-4a4f-b70e-b998e4eeba7b",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) \"after each\" hook in \"Sesi 11 - SauceDemo Automation Test (POM + Visual Testing)\"",
+              "timedOut": false,
+              "duration": 199,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const testName = this.currentTest.title.replace(/\\s+/g, '_');\ntry {\n  await takeFullScreenshot(driver, testName);\n  await takePartialScreenshot(driver, By.css('body'), testName);\n} catch (err) {\n  console.warn(`⚠ Screenshot gagal di test \"${testName}\": ${err.message}`);\n}",
+              "err": {},
+              "uuid": "6001a776-6fac-4d86-b880-e8369ba1ce3b",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
               "isHook": true,
               "skipped": false
             }
@@ -74,9 +92,9 @@
           "tests": [
             {
               "title": "Login ke SauceDemo",
-              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory) Login ke SauceDemo",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) Login ke SauceDemo",
               "timedOut": false,
-              "duration": 1364,
+              "duration": 1015,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -85,16 +103,16 @@
               "context": null,
               "code": "await loginPage.open();\nconst title = await driver.getTitle();\nassert.strictEqual(title, 'Swag Labs');\nawait loginPage.login('standard_user', 'secret_sauce');\nawait loginPage.isLoginSuccessful();",
               "err": {},
-              "uuid": "e7f50b58-9b29-4ca8-b90c-09a4e7f44e26",
-              "parentUUID": "3b1b306c-6ec0-4f56-94fa-6f5ee982aa7f",
+              "uuid": "8ec1326e-e07d-47c4-a8c9-58bb9d1b20e6",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
               "isHook": false,
               "skipped": false
             },
             {
               "title": "Mengurutkan produk dari Z ke A",
-              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory) Mengurutkan produk dari Z ke A",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) Mengurutkan produk dari Z ke A",
               "timedOut": false,
-              "duration": 118,
+              "duration": 89,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -103,21 +121,40 @@
               "context": null,
               "code": "await inventoryPage.sortByZtoA();\nconst productName = await inventoryPage.getFirstProductName();\nassert.strictEqual(\n  productName,\n  'Test.allTheThings() T-Shirt (Red)',\n  'Produk pertama tidak sesuai Z-A'\n);",
               "err": {},
-              "uuid": "96c3e767-e428-4193-9658-b08fe9ee2b7e",
-              "parentUUID": "3b1b306c-6ec0-4f56-94fa-6f5ee982aa7f",
+              "uuid": "fd184a93-d1d8-4b06-8fc1-eaef7f89aec9",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visual Test - Halaman Login",
+              "fullTitle": "Sesi 11 - SauceDemo Automation Test (POM + Visual Testing) Visual Test - Halaman Login",
+              "timedOut": false,
+              "duration": 301,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.open();\n  const { isMatch, diffPixels, diffPath } = await compareScreenshot(driver, 'LoginPage');\n  \n// Kalau mau otomatis fail kalau ada perbedaan:\nassert.strictEqual(isMatch, true, `Visual mismatch ditemukan (${diffPixels} pixel berbeda)`);",
+              "err": {},
+              "uuid": "3cc0f44f-1619-42f2-a75c-23f3ca731984",
+              "parentUUID": "b3659644-30de-4539-9408-70ad1848daa9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e7f50b58-9b29-4ca8-b90c-09a4e7f44e26",
-            "96c3e767-e428-4193-9658-b08fe9ee2b7e"
+            "8ec1326e-e07d-47c4-a8c9-58bb9d1b20e6",
+            "fd184a93-d1d8-4b06-8fc1-eaef7f89aec9",
+            "3cc0f44f-1619-42f2-a75c-23f3ca731984"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1482,
+          "duration": 1405,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000

@@ -1,6 +1,6 @@
-const { By, until } = require('selenium-webdriver');
+import { By, until } from 'selenium-webdriver';
 
-class LoginPage {
+export default class LoginPage {
   constructor(driver) {
     this.driver = driver;
     this.url = 'https://www.saucedemo.com';
@@ -25,5 +25,3 @@ class LoginPage {
     return this.driver.wait(until.elementIsVisible(cartIconEl), 5000);
   }
 }
-
-module.exports = LoginPage;

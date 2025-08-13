@@ -7,8 +7,7 @@
   "scripts": {
     "test:sesi9": "cross-env BROWSER=chrome MODE=headed mocha \"tests/Sesi_9/sesi9-test_sauce.js\" --timeout 60000 --reporter mochawesome",
     "test:sesi10": "cross-env BROWSER=chrome MODE=headed mocha \"tests/Sesi_10/sesi10-test_sauce.js\" --timeout 60000 --reporter mochawesome",
-    "test:sesi11": "cross-env BROWSER=chrome MODE=headed mocha \"tests/Sesi_11/sesi11-test_sauce.mjs\" --timeout 60000 --reporter mochawesome",
-    "test:all": "cross-env BROWSER=chrome MODE=headed mocha \"tests/**/*.{js,mjs}\" --timeout 60000 --reporter mochawesome",    
+    "test:all": "cross-env BROWSER=chrome MODE=headed mocha \"tests/**/*.{js}\" --timeout 60000 --reporter mochawesome",    
     "test:login": "cross-env BROWSER=chrome MODE=headed mocha \"tests/**/*.js\" --grep 'Login'"
   },
   "author": "GekkoMarta",
