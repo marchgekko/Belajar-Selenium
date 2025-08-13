@@ -32,7 +32,7 @@ dikombinasikan dengan framework Mocha untuk pengujian, serta Mochawesome untuk l
     - Screenshot otomatis pada akhir setiap test
     - Struktur kode modular untuk kemudahan maintenance
   
-  - `Menjalankan Sesi 11 : npm run test`
+  - Menjalankan Sesi 11 : `npm run test`
   
 ## Laporan Hasil Pengujian
 Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawesome-report/. Bukalah file mochawesome.html di browser untuk melihat hasil pengujian secara visual.
