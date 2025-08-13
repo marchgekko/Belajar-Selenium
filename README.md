@@ -40,9 +40,6 @@ serta pengunaan cross-platform environmen untuk mempermudah pengaturan variabel 
 ## Laporan Hasil Pengujian
 Hasil pengujian akan ditampilkan melalui laporan interaktif dalam folder mochawesome-report/. Bukalah file mochawesome.html di browser untuk melihat hasil pengujian secara visual.
 
-## Kontribusi
-Silakan untuk fork dan ajukan pull request!
-
 ## Author
 - [Andrean Martsyah](https://github.com/marchgekko)
 - https://www.instagram.com/andreanmarta00/
