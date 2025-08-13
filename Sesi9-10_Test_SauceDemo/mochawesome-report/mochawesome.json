@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2025-08-09T15:28:12.580Z",
-    "end": "2025-08-09T15:28:17.020Z",
-    "duration": 4440,
+    "start": "2025-08-13T05:32:52.642Z",
+    "end": "2025-08-13T05:32:57.912Z",
+    "duration": 5270,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "182847ed-946b-4273-b843-80388f3e4b89",
+      "uuid": "9019ef54-09dd-4f54-b43a-6ca184e95a4b",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0578cef3-8389-4973-ade0-d1695f253b2a",
+          "uuid": "da4388a9-e0a9-4e10-9a9b-a94976be0a82",
           "title": "Sesi 10 - SauceDemo Automation Test",
           "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Test_SauceDemo\\tests\\Sesi_10\\sesi10-test_sauce.js",
           "file": "\\tests\\Sesi_10\\sesi10-test_sauce.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"Sesi 10 - SauceDemo Automation Test\"",
               "fullTitle": "Sesi 10 - SauceDemo Automation Test \"before all\" hook in \"Sesi 10 - SauceDemo Automation Test\"",
               "timedOut": false,
-              "duration": 1113,
+              "duration": 992,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "const browser = process.env.BROWSER || 'chrome';\nconst mode = process.env.MODE || 'headed';\nlet builder = new Builder().forBrowser(browser);\nif (browser === 'chrome') {\n  let options = new chrome.Options().addArguments('--incognito');\n  if (mode === 'headless') {\n    options.addArguments('--headless', '--disable-gpu', '--window-size=1920,1080');\n  }\n  builder.setChromeOptions(options);\n} else if (browser === 'firefox') {\n  let options = new firefox.Options().addArguments('-private');\n  if (mode === 'headless') {\n    options.headless();\n  }\n  builder.setFirefoxOptions(options);\n}\ndriver = await builder.build();",
               "err": {},
-              "uuid": "511a23d6-eb9d-4186-aece-014775df6991",
-              "parentUUID": "0578cef3-8389-4973-ade0-d1695f253b2a",
+              "uuid": "c6180bf2-2b72-447d-a2e7-24bc4b67120e",
+              "parentUUID": "da4388a9-e0a9-4e10-9a9b-a94976be0a82",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after all\" hook in \"Sesi 10 - SauceDemo Automation Test\"",
               "fullTitle": "Sesi 10 - SauceDemo Automation Test \"after all\" hook in \"Sesi 10 - SauceDemo Automation Test\"",
               "timedOut": false,
-              "duration": 66,
+              "duration": 105,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "3dff514f-85b3-4fab-9170-967d57b6c6c7",
-              "parentUUID": "0578cef3-8389-4973-ade0-d1695f253b2a",
+              "uuid": "304711a4-bcbd-4304-903b-a7ffb4984012",
+              "parentUUID": "da4388a9-e0a9-4e10-9a9b-a94976be0a82",
               "isHook": true,
               "skipped": false
             }
@@ -76,7 +76,7 @@
               "title": "Login ke SauceDemo",
               "fullTitle": "Sesi 10 - SauceDemo Automation Test Login ke SauceDemo",
               "timedOut": false,
-              "duration": 1303,
+              "duration": 1469,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -85,8 +85,8 @@
               "context": null,
               "code": "await driver.get('https://www.saucedemo.com');\n// Verifikasi title\nconst title = await driver.getTitle();\nassert.strictEqual(title, 'Swag Labs');\n// Login\nawait driver.findElement(By.css('[data-test=\"username\"]')).sendKeys('standard_user');\nawait driver.findElement(By.css('[data-test=\"password\"]')).sendKeys('secret_sauce');\nawait driver.findElement(By.css('[data-test=\"login-button\"]')).click();\n// Verifikasi login berhasil\nlet cartIcon = await driver.wait(until.elementLocated(By.css('[data-test=\"shopping-cart-link\"]')), 10000);\nawait driver.wait(until.elementIsVisible(cartIcon), 5000);",
               "err": {},
-              "uuid": "13343aa5-08e6-4910-b0a8-b94b08ce8b45",
-              "parentUUID": "0578cef3-8389-4973-ade0-d1695f253b2a",
+              "uuid": "96c9b151-af26-4c68-a88d-c50bcf0f22bd",
+              "parentUUID": "da4388a9-e0a9-4e10-9a9b-a94976be0a82",
               "isHook": false,
               "skipped": false
             },
@@ -94,7 +94,7 @@
               "title": "Mengurutkan produk dari Z ke A",
               "fullTitle": "Sesi 10 - SauceDemo Automation Test Mengurutkan produk dari Z ke A",
               "timedOut": false,
-              "duration": 96,
+              "duration": 151,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -103,27 +103,27 @@
               "context": null,
               "code": "// Dropdown sorting\nlet dropdownSort = await driver.wait(\n  until.elementLocated(By.css('[data-test=\"product-sort-container\"]')),\n  10000\n);\nawait driver.wait(until.elementIsVisible(dropdownSort), 5000);\nawait dropdownSort.sendKeys('Name (Z to A)');\n// Ambil produk pertama\nconst firstProduct = await driver.wait(\n  until.elementLocated(By.className('inventory_item_name')),\n  10000\n);\nconst productName = await firstProduct.getText();\nassert.strictEqual(\n  productName,\n  'Test.allTheThings() T-Shirt (Red)',\n  'Produk pertama tidak sesuai Z-A'\n);",
               "err": {},
-              "uuid": "6bd880f7-e424-4698-8c9f-aa8bea2ad265",
-              "parentUUID": "0578cef3-8389-4973-ade0-d1695f253b2a",
+              "uuid": "2d3f6cc1-c085-4cbf-8474-82513c265256",
+              "parentUUID": "da4388a9-e0a9-4e10-9a9b-a94976be0a82",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "13343aa5-08e6-4910-b0a8-b94b08ce8b45",
-            "6bd880f7-e424-4698-8c9f-aa8bea2ad265"
+            "96c9b151-af26-4c68-a88d-c50bcf0f22bd",
+            "2d3f6cc1-c085-4cbf-8474-82513c265256"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1399,
+          "duration": 1620,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000
         },
         {
-          "uuid": "ac1cec0d-408f-43ba-abae-fe2afe1dd7db",
+          "uuid": "594c1fe2-c0d4-434c-9173-8e61d6e80f9f",
           "title": "Sesi 9 - SauceDemo Automation Test",
           "fullFile": "C:\\Users\\LENOVO\\Documents\\QA Engineer\\Belajar_Selenium\\Test_SauceDemo\\tests\\Sesi_9\\sesi9-test_sauce.js",
           "file": "\\tests\\Sesi_9\\sesi9-test_sauce.js",
@@ -132,7 +132,7 @@
               "title": "\"before all\" hook in \"Sesi 9 - SauceDemo Automation Test\"",
               "fullTitle": "Sesi 9 - SauceDemo Automation Test \"before all\" hook in \"Sesi 9 - SauceDemo Automation Test\"",
               "timedOut": false,
-              "duration": 802,
+              "duration": 967,
               "state": null,
               "speed": null,
               "pass": false,
@@ -141,8 +141,8 @@
               "context": null,
               "code": "const browser = process.env.BROWSER || 'chrome';\nlet builder = new Builder().forBrowser(browser);\nif (browser === 'chrome') {\n  const options = new chrome.Options().addArguments('--incognito');\n  builder.setChromeOptions(options);\n} else if (browser === 'firefox') {\n  const options = new firefox.Options().addArguments('-private');\n  builder.setFirefoxOptions(options);\n}\ndriver = await builder.build();",
               "err": {},
-              "uuid": "6c16ddce-fe59-49be-80ea-b3cd51b055c8",
-              "parentUUID": "ac1cec0d-408f-43ba-abae-fe2afe1dd7db",
+              "uuid": "9362d9b3-a5c8-4388-87d4-8f23774feef1",
+              "parentUUID": "594c1fe2-c0d4-434c-9173-8e61d6e80f9f",
               "isHook": true,
               "skipped": false
             }
@@ -152,7 +152,7 @@
               "title": "\"after all\" hook in \"Sesi 9 - SauceDemo Automation Test\"",
               "fullTitle": "Sesi 9 - SauceDemo Automation Test \"after all\" hook in \"Sesi 9 - SauceDemo Automation Test\"",
               "timedOut": false,
-              "duration": 50,
+              "duration": 95,
               "state": null,
               "speed": null,
               "pass": false,
@@ -161,8 +161,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "46ba5941-4570-4f0f-b2c2-246671d89ef4",
-              "parentUUID": "ac1cec0d-408f-43ba-abae-fe2afe1dd7db",
+              "uuid": "e561e2e4-86d9-457b-a7a2-9a525f311316",
+              "parentUUID": "594c1fe2-c0d4-434c-9173-8e61d6e80f9f",
               "isHook": true,
               "skipped": false
             }
@@ -172,7 +172,7 @@
               "title": "Login ke SauceDemo",
               "fullTitle": "Sesi 9 - SauceDemo Automation Test Login ke SauceDemo",
               "timedOut": false,
-              "duration": 877,
+              "duration": 1323,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -181,8 +181,8 @@
               "context": null,
               "code": "await driver.get('https://www.saucedemo.com');\n// Verifikasi title\nconst title = await driver.getTitle();\nassert.strictEqual(title, 'Swag Labs', 'Title halaman tidak sesuai');\n// Login\nawait driver.findElement(By.css('[data-test=\"username\"]')).sendKeys('standard_user');\nawait driver.findElement(By.css('[data-test=\"password\"]')).sendKeys('secret_sauce');\nawait driver.findElement(By.css('[data-test=\"login-button\"]')).click();\n// Verifikasi login berhasil\nconst cartIcon = await driver.wait(\n  until.elementLocated(By.css('[data-test=\"shopping-cart-link\"]')),\n  10000\n);\nawait driver.wait(until.elementIsVisible(cartIcon), 5000);\nassert.ok(await cartIcon.isDisplayed(), 'Ikon keranjang tidak muncul setelah login');",
               "err": {},
-              "uuid": "31b6fc43-157a-443d-8781-a6229a03a00d",
-              "parentUUID": "ac1cec0d-408f-43ba-abae-fe2afe1dd7db",
+              "uuid": "87f99846-ca61-44f5-81cd-8a6b145923cc",
+              "parentUUID": "594c1fe2-c0d4-434c-9173-8e61d6e80f9f",
               "isHook": false,
               "skipped": false
             },
@@ -190,7 +190,7 @@
               "title": "Mengurutkan produk dari Z ke A",
               "fullTitle": "Sesi 9 - SauceDemo Automation Test Mengurutkan produk dari Z ke A",
               "timedOut": false,
-              "duration": 119,
+              "duration": 152,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -199,21 +199,21 @@
               "context": null,
               "code": "// Dropdown sorting\nconst dropdownSort = await driver.wait(\n  until.elementLocated(By.css('[data-test=\"product-sort-container\"]')),\n  10000\n);\nawait driver.wait(until.elementIsVisible(dropdownSort), 5000);\nawait dropdownSort.sendKeys('Name (Z to A)');\n// Ambil produk pertama\nconst firstProduct = await driver.wait(\n  until.elementLocated(By.className('inventory_item_name')),\n  10000\n);\nconst productName = await firstProduct.getText();\n// Validasi hasil sorting\nassert.strictEqual(\n  productName,\n  'Test.allTheThings() T-Shirt (Red)',\n  'Produk pertama tidak sesuai urutan Z-A'\n);",
               "err": {},
-              "uuid": "fae846ab-e04b-49aa-b33e-d6605d8c9919",
-              "parentUUID": "ac1cec0d-408f-43ba-abae-fe2afe1dd7db",
+              "uuid": "46cabad8-9c2f-4bbd-ad91-14c665c8fcf7",
+              "parentUUID": "594c1fe2-c0d4-434c-9173-8e61d6e80f9f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "31b6fc43-157a-443d-8781-a6229a03a00d",
-            "fae846ab-e04b-49aa-b33e-d6605d8c9919"
+            "87f99846-ca61-44f5-81cd-8a6b145923cc",
+            "46cabad8-9c2f-4bbd-ad91-14c665c8fcf7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 996,
+          "duration": 1475,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000

@@ -2,8 +2,9 @@ const assert = require('assert');
 const { Builder } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const firefox = require('selenium-webdriver/firefox');
-const LoginPage = require('../pages/LoginPage');
-const InventoryPage = require('../pages/InventoryPage');
+const LoginPage = require('../pages/loginPage');
+const InventoryPage = require('../pages/inventoryPage');
+
 
 describe('Sesi 11 - SauceDemo Automation Test (POM, tanpa driverFactory)', function () {
   this.timeout(30000);
